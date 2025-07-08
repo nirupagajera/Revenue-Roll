@@ -173,7 +173,10 @@ public WebDriver driver;
     	applicant_detail_button = driver.findElement(By.xpath("//*[@id=\"step-3\"]/div/form/div[2]/button[2]"));
     	applicant_detail_button.click();
     	
+    	Thread.sleep(1000);
     	agree_checkbox = driver.findElement(By.xpath("//*[@id=\"step-4\"]/div/form/div[1]/div[1]/input"));
+    	JavascriptExecutor js = (JavascriptExecutor) driver;
+    	js.executeScript("window.scrollBy(0,-400)", agree_checkbox);
     	agree_checkbox.click();
     	
     	agree_button = driver.findElement(By.xpath("//*[@id=\"step-4\"]/div/form/div[2]/button[2]"));
