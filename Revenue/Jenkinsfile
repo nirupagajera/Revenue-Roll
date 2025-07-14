@@ -11,19 +11,19 @@ pipeline
       }
     }
 
-    stage('deploy')
-    {
-      steps
-      {
-        echo "Deploy Process is completed successfully."
-      }
-    }
-
     stage('test')
     {
       steps
       {
         echo "Test Process is completed successfully."
+      }
+    }
+
+    stage('deploy')
+    {
+      steps
+      {
+        echo "Deploy Process is completed successfully."
       }
     }
     
