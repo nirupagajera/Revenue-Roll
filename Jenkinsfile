@@ -21,12 +21,20 @@ pipeline
       }
     }
 
+    stage('compile')
+    {
+      steps
+      {
+        echo "Compile Process is completed successfully."
+        bat "mvn compile"
+      }
+    }
+
     stage('deploy')
     {
       steps
       {
         echo "Deploy Process is completed successfully."
-        bat "mvn compile"
       }
     }
     
